@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+    body {
+        font: 12px sans-serif;
+    }
+
+    path {
+        stroke-width: 1px;
+        stroke: steelblue;
+        fill: transparent;
+        cursor: pointer;
+    }
+
+    path:hover, path.highlighted {
+        fill: tomato;
+    }
+
+</style>
+<body>
+<div class="mapa"></div>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+    //Map dimensions (in pixels)
+    var width = 600,
+        height = 307;
+
+    //Map projection
+    var projection = d3.geo.mercator()
+        .scale(407722.77556121536)
+        .center([-79.00704999999999,-2.90379018566153]) //projection center
+        .translate([width/2,height/2]) //translate to center the map in view
+
+    //Generate paths based on projection
+    var path = d3.geo.path()
+        .projection(projection);
+
+    //Create an SVG
+    var svg = d3.select("body").append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+    //Group for the map features
+    var features = svg.append("g")
+        .attr("class","features");
+
+    //Create zoom/pan listener
+    //Change [1,Infinity] to adjust the min/max zoom scale
+    var zoom = d3.behavior.zoom()
+        .scaleExtent([1, Infinity])
+        .on("zoom",zoomed);
+
+    svg.call(zoom);
+
+    d3.json("json3.php",function(error,geodata) {
+        if (error) return console.log(error); //unknown error, check the console
+
+        //Create a path for each map feature in the data
+        features.selectAll("path")
+            .data(geodata.features)
+            .enter()
+            .append("path")
+            .attr("d",path)
+            .on("click",clicked);
+
+    });
+
+    d3.selectAll("#download-svg")
+        .attr("href", "data:image/svg+xml;charset=utf-8;base64," +
+            btoa(unescape(encodeURIComponent(
+                d3.selectAll("svg").attr("version", "1.1").attr("xmlns", "http://www.w3.org/2000/svg")
+                    .node().parentNode.innerHTML)
+                )
+            )
+        )
+        .attr("download",filename);
+    // Add optional onClick events for features here
+    // d.properties contains the attributes (e.g. d.properties.name, d.properties.population)
+    function clicked(d,i) {
+
+    }
+
+
+    //Update map on zoom/pan
+    function zoomed() {
+        features.attr("transform", "translate(" + zoom.translate() + ")scale(" + zoom.scale() + ")")
+            .selectAll("path").style("stroke-width", 1 / zoom.scale() + "px" );
+    }
+
+</script>
