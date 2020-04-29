@@ -1,0 +1,305 @@
+/* You can add global styles to this file, and also import other style files */
+#overlay {
+  fill: None;
+  stroke: #ff00ff;
+  stroke-width: 1px;
+}
+#categorias{
+    background-color: red;
+}
+body {
+  font: 12px sans-serif;
+  background-color: #212529;
+}
+#map {
+  background-color: black;
+}
+
+path {
+  stroke-width: 2px;
+  fill: transparent;
+  cursor: pointer;
+}
+.cactivo {
+  stroke: transparent !important;
+}
+.cat47 {
+  stroke: #10b4cc;
+}
+.cat75 {
+  stroke: #ff3f9e;
+}
+.cat77 {
+  stroke: #476cda;
+}
+.cat46 {
+  stroke: #63ea7a;
+}
+.cat79 {
+  stroke: #ffd06c;
+}
+.cat82 {
+  stroke: #ff766c;
+}
+.cat83 {
+  stroke: #9f3ed9;
+}
+.cat86 {
+  stroke: #ffd200;
+}
+.cat103 {
+  stroke: red;
+}
+.cat167 {
+  stroke: #360dc4;
+}
+.cat78 {
+  stroke: #9aafb2;
+}
+.cat154 {
+  stroke: darkred;
+}
+.cat47 {
+  stroke: #10b4cc;
+}
+.cat75 {
+  stroke: #ff3f9e;
+}
+.cat77 {
+  stroke: #476cda;
+}
+.cat46 {
+  stroke: #63ea7a;
+}
+.cat79 {
+  stroke: #ffd06c;
+}
+.cat82 {
+  stroke: #ff766c;
+}
+.cat83 {
+  stroke: #9f3ed9;
+}
+.cat86 {
+  stroke: #ffd200;
+}
+.cat103 {
+  stroke: red;
+}
+.cat167 {
+  stroke: #360dc4;
+}
+.cat78 {
+  stroke: #9aafb2;
+}
+.cat154 {
+  stroke: darkred;
+}
+.activo {
+  background-color: white !important;
+  color: black !important;
+}
+/*cssbt*/
+.btnc {
+  color: white;
+  font-size: 12px;
+  background-color: #10b4cc;
+
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label.ui-state-highlight div{
+  width: 100%;
+  background-color: #10b4cc;
+
+}
+
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label.ui-state-highlight .bt47  {
+  background-color: #10b4cc;
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label.ui-state-highlight .bt75 {
+  background-color: #ff3f9e;
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label.ui-state-highlight .bt77 {
+  background-color: #476cda;
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label.ui-state-highlight .bt46 {
+  background-color: #63ea7a;
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label.ui-state-highlight .bt79 {
+  background-color: #ffd06c;
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label.ui-state-highlight .bt82 {
+  background-color: #ff766c;
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label.ui-state-highlight .bt83 {
+  background-color: #9f3ed9;
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label.ui-state-highlight .bt86 {
+  background-color: #ffd200;
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label.ui-state-highlight .bt103 {
+  background-color: red;
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label.ui-state-highlight .bt167 {
+  background-color: #360dc4;
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label.ui-state-highlight .bt78 {
+  background-color: #9aafb2;
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label.ui-state-highlight .bt154 {
+  background-color: darkred;
+}
+
+/* path:hover, path.highlighted {
+        fill: tomato;
+    } */
+/*Sidebar*/
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 5000; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.3); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 10px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 22px;
+  left: 5px;
+  font-size: 36px;
+  //margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  z-index: 5001;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+/*
+*/
+body .ui-widget {
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 9px;
+  text-decoration: none;
+}
+.field_input.ui-inputtext {
+  padding:0;
+  background-color: #557db1 !important;
+}
+body .ui-tree {
+  border: 1px solid #c8c8c8;
+  background-color: #ffffff;
+  color: #333333;
+  padding: 0 !important;
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-tree-toggler {
+  vertical-align: middle;
+  display: none!important;
+  float: none;
+  /* margin: 0 0.143em 0 0; */
+  color: #848484;
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-icon {
+  vertical-align: middle;
+  display: none;
+  margin: 0 0.143em 0 0;
+  color: #848484;
+}
+body .ui-tree .ui-tree-container {
+  padding: 0.286em;
+  margin: 0;
+}
+body .ui-chkbox .ui-chkbox-box {
+  border: 1px solid #a6a6a6;
+  background-color: #ffffff;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  border-radius: 3px;
+  transition: background-color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+body .ui-chkbox {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  width: 10px;
+  height: 10px;
+}
+body .ui-chkbox .ui-chkbox-box .ui-chkbox-icon {
+  overflow: hidden;
+  position: relative;
+  font-size: 10px;
+}
+.ui-tree {
+  width: auto;
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-chkbox {
+   margin: 0 ; 
+}
+.ui-chkbox {
+  margin: 0;
+}
+body .ui-tree .ui-tree-container .ui-treenode{
+  padding: 0;
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label{
+  padding: 0;
+  padding-left: 3px;
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-chkbox {
+  display: none;
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content:focus {
+  outline: 0 none;
+  outline-offset: 0;
+   box-shadow: 0 0 0 0em ; 
+}
+body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label.ui-state-highlight {
+  background-color:transparent;
+  color: #ffffff;
+}
