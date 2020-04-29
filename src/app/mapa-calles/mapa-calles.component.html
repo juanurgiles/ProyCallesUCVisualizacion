@@ -9,7 +9,15 @@
         <h4 *ngIf="item.activo || item.idtipocategoria==11" style="color: aliceblue;font-size: 9px;">{{item.nombre}}</h4>
         <p-tree *ngIf="item.activo || item.idtipocategoria==11" selectionMode="checkbox"  [value]="this.cats[i]" (onNodeSelect)="nodeSelect($event)" [(selection)]="catSel" (onNodeUnselect)="nodeUnselect($event)">
           <ng-template let-node pTemplate="default">
-           <div class="bt{{node.idcategoria}}"  > {{node.categoria| uppercase}}</div>
+           <div class="bnt bt{{node.idcategoria}}" style="width: 100%;" > {{node.categoria| uppercase}} 
+            <span >
+              <!-- The icon that will wrap the number -->
+              <!-- a strong element with the custom content, in this case a number -->
+              <strong >
+                {{node.total| uppercase}}
+              </strong>
+          </span> 
+           </div>
           </ng-template>
         </p-tree>     
    

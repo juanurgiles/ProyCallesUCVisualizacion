@@ -148,7 +148,14 @@ body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-
 body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label.ui-state-highlight .bt154 {
   background-color: darkred;
 }
-
+.bnt{
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.ctotal{
+  //position: absolute;
+  right: 0;
+}
 /* path:hover, path.highlighted {
         fill: tomato;
     } */
@@ -168,17 +175,17 @@ body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-
 
 /* The sidebar links */
 .sidebar a {
-  padding: 8px 8px 8px 32px;
+  padding: 2px 2px 2px 2px;
   text-decoration: none;
   font-size: 10px;
-  color: #818181;
+  color: #faf3f3;
   display: block;
   transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidebar a:hover {
-  color: #f1f1f1;
+  color: #e0b8b8;
 }
 
 /* Position and style the close button (top right corner) */
@@ -300,6 +307,7 @@ body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content:focus {
    box-shadow: 0 0 0 0em ; 
 }
 body .ui-tree .ui-tree-container .ui-treenode .ui-treenode-content .ui-treenode-label.ui-state-highlight {
+ 
   background-color:transparent;
   color: #ffffff;
 }

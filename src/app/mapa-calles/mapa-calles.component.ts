@@ -80,6 +80,7 @@ export class MapaCallesComponent implements OnInit {
     this.revisarCategoriasPrincipales()
   }
   nodeUnselect(event) {
+    //deseleccionar una categoria
     this.map.removeLayer(this.layers[event.node.idcategoria]);
     this.revisarCategoriasPrincipales()
 
@@ -161,7 +162,7 @@ export class MapaCallesComponent implements OnInit {
           style: {
             className: 'cat' + id
           }
-          // ,onEachFeature: onEachFeature
+          ,onEachFeature: onEachFeature
         });
         // añado la clase de color a cada elemento
         this.layers[id].setStyle({ className: 'cat' + id });
@@ -169,17 +170,17 @@ export class MapaCallesComponent implements OnInit {
 
 
 
-        // function onEachFeature(feature, layer) {
-        //   if (feature.properties) {
-        //     layer.bindPopup(
-        //       '<b>' +
-        //       feature.properties.name +
-        //       '</b>  ' +
-        //       feature.properties.prop0 +
-        //       '.'
-        //     );
-        //   }
-        // }
+        function onEachFeature(feature, layer) {
+          if (feature.properties) {
+            layer.bindPopup(
+              '<b>' +
+              feature.properties.name +
+              '</b>  ' +
+              feature.properties.prop0 +
+              '.'
+            );
+          }
+        }
 
 
       });
